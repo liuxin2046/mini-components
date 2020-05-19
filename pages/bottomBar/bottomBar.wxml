@@ -1,0 +1,11 @@
+<!--pages/bottomBar/bottomBar.wxml-->
+<view class="container">
+  <van-radio-group value="{{ value }}" bind:change="onChange">
+    <van-radio name="WAIT_PAY">待支付</van-radio>
+    <van-radio name="WAIT_CONFIRM">待收货</van-radio>
+    <van-radio name="APPLY_REFUND">申请退款</van-radio>
+    <van-radio name="CLOSE">交易关闭</van-radio>
+    <van-radio name="SUCCESS">交易成功(已评价)</van-radio>
+  </van-radio-group>
+</view>
+<bottom-bar info="{{info}}" bind:viewLogistics="viewLogistics" bind:cancelOrder="cancelOrder" bind:cancelApply="cancelApply" bind:deleteOrder="deleteOrder" bind:confirmDelivery="confirmDelivery" bind:comment="comment" bind:viewComment="viewComment"></bottom-bar>

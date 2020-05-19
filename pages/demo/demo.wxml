@@ -1,0 +1,9 @@
+<!--pages/demo/demo.wxml-->
+<view class="text-align">商城通用组件Demo</view>
+<view class="list">
+  <block wx:for="{{templateList}}" wx:key="index">
+    <view data-url="{{item.url}}" bindtap="handleEnter">
+      {{index + 1}}. {{item.name}}
+    </view>
+  </block>
+</view>

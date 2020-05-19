@@ -1,0 +1,24 @@
+<!--components/Card/Card.wxml-->
+<view class="card">
+  <image class="cover" src="{{image}}" mode="aspectFill" />
+  <view class="desc">
+    <view class="name">
+      {{name}}
+    </view>
+    <view class="attributes">
+      {{attributes}}
+    </view>
+    <view>
+      <text class="price">￥{{price}} </text>
+      <text class="num">x{{quantity}}</text>
+    </view>
+  </view>
+  <view class="right" wx:if="{{refund}}">
+    <view wx:if="{{!status}}" class="apply-btn" bindtap="handleRefund">
+      {{statusTip}}
+    </view>
+    <view wx:else class="apply-status">
+      {{statusTip}}
+    </view>
+  </view>
+</view>

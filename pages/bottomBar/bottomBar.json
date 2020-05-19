@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bottom-bar": "/components/BottomBar/BottomBar",
+    "van-radio": "/components/Vant/radio/index",
+    "van-radio-group": "/components/Vant/radio-group/index"
+  }
+}

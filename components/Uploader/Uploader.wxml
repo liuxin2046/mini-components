@@ -1,0 +1,2 @@
+<!--components/Uploader/Uploader.wxml-->
+<vant-uploader file-list="{{ fileList }}" accept="image" upload-text="上传图片" bind:before-read="beforeRead" bind:after-read="afterRead" bind:delete="handleDelete"></vant-uploader>

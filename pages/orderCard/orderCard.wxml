@@ -1,0 +1,4 @@
+<!--pages/orderCard/orderCard.wxml-->
+<view class="container">
+  <order-card info="{{info}}"></order-card>
+</view>

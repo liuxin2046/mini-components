@@ -1,0 +1,38 @@
+<!--components/OrderCard/OrderCard.wxml-->
+<view>
+  <view class="header">
+    <text class="order-no">订单编号: {{orderNo}}</text>
+    <text class="status">{{statusTxt}}</text>
+  </view>
+  <block wx:for="{{orderItems}}">
+    <card info="{{item}}"></card>
+  </block>
+  <view class="bottom">
+    <view class="total-price">
+      <text class="total-price" wx:if="{{paymentTime}}">实付: ￥{{presentPrice / 100}}</text>
+    </view>
+    <view class="options" wx:if="{{status === 'WAIT_PAY'}}">
+      <view class="order-btn" catchtap="cancelOrder">取消订单</view>
+      <view class="order-btn black" catchtap="order">支付 <van-count-down customStyle="color: white;font-size: 24rpx;" time="{{ time }}" format="mm:ss" bind:finish="handleFinish"/></view>
+    </view>
+    <view class="options" wx:if="{{status === 'WAIT_DELIVERY'}}">
+      <view class="order-btn" catchtap="applyRefund">申请退款</view>
+      <button open-type="contact">联系客服</button>
+    </view>
+    <view class="options" wx:if="{{status === 'WAIT_CONFIRM'}}">
+      <view class="order-btn" catchtap="viewLogistics">查看物流</view>
+      <view class="order-btn black" catchtap="confirmDelivery">确认收货</view>
+    </view>
+    <view class="options" wx:if="{{status === 'APPLY_REFUND'}}">
+      <view class="order-btn black" catchtap="cancelApply">撤销申请</view>
+      <button open-type="contact">联系客服</button>
+    </view>
+    <view class="options" wx:if="{{status === 'CLOSE'}}">
+      <view class="order-btn" catchtap="deleteOrder">删除订单</view>
+    </view>
+    <view class="options" wx:if="{{status === 'SUCCESS'}}">
+      <view wx:if="{{hadComment}}" class="order-btn" catchtap="viewComment">查看评价</view>
+      <view wx:else class="order-btn black" catchtap="comment">评价</view>
+    </view>
+  </view>
+</view>

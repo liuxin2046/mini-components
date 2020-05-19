@@ -1,0 +1,4 @@
+<!--pages/groupCard/groupCard.wxml-->
+<view class="container">
+  <group-card info="{{info}}" bind:joinActivity="handleJoinActivity"></group-card>
+</view>

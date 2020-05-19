@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card": "/components/Card/Card",
+    "van-count-down": "/components/Vant/count-down/index"
+  }
+}

@@ -1,0 +1,44 @@
+<!--components/CommentItem/CommentItem.wxml-->
+<view>
+  <view class="comment-item">
+    <view class="left-wrap">
+      <image class="avatar" src="{{member.avatar}}" mode="aspectFill" />
+    </view>
+    <view class="right-wrap">
+      <view class="header">
+        <view>
+          <view class="user-name">
+            {{member.nickname}}
+          </view>
+          <view class="create-time">
+            {{commentAt}}
+          </view>
+        </view>
+        <view class="options">
+          <van-rate readonly value="{{star}}" size="16"/>
+          <view wx:if="{{userId === member.id}}" class="btn" catchtap="toggleDownMenu">
+            ...
+          </view>
+          <view class="menu" wx:if="{{showMenu}}">
+            <view class="delete" data-id="{{id}}" catchtap="deleteComment">
+              删除
+            </view>
+            <view class="cancel" catchtap="toggleDownMenu">
+              取消
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="content-text">
+          {{ info.byDefault ? '交易成功未及时作出评价，系统默认好评！' : info.content}}
+        </view>
+        <view class="images-wrap">
+          <block wx:for="{{images}}">
+            <image class="image" src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

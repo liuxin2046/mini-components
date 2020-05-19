@@ -1,0 +1,4 @@
+<!--pages/commentCard/commentCard.wxml-->
+<view class="container">
+  <comment-item info="{{info}}" userId="{{userId}}" bind:handleDelete="handleDelete"></comment-item>
+</view>

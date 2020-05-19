@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-checkbox": "/components/Vant/checkbox/index",
+    "van-count-down": "/components/Vant/count-down/index"
+  }
+}

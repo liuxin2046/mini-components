@@ -1,0 +1,92 @@
+.order {
+  display: flex;
+  margin-bottom: 70rpx;
+}
+.order .cover {
+  width: 160rpx;
+  height: 160rpx;
+}
+.order .desc {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order .desc .attribute {
+  color: rgba(1, 1, 1, 0.6);
+}
+.order .desc .time {
+  font-size: 24rpx;
+  color: rgba(1, 1, 1, 0.6);
+}
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-item .left-wrap {
+  width: 60rpx;
+}
+.comment-item .left-wrap .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.comment-item .right-wrap {
+  flex-grow: 1;
+  padding-left: 20rpx;
+}
+.comment-item .right-wrap .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-item .right-wrap .header .create-time {
+  font-size: 24rpx;
+  font-weight: 300;
+  color: rgba(1, 1, 1, 0.6);
+}
+.comment-item .right-wrap .header .options {
+  text-align: right;
+  position: relative;
+}
+.comment-item .right-wrap .header .options .btn {
+  font-size: 40rpx;
+  margin-right: 10rpx;
+  color: #000;
+}
+.comment-item .right-wrap .header .options .menu {
+  position: absolute;
+  top: 60rpx;
+  right: 0;
+  width: 200rpx;
+  z-index: 999;
+  text-align: center;
+  background: #fff;
+  border: 2rpx solid rgba(1, 1, 1, 0.05);
+}
+.comment-item .right-wrap .header .options .menu .delete,
+.comment-item .right-wrap .header .options .menu .cancel {
+  padding: 5rpx;
+}
+.comment-item .right-wrap .header .options .menu .delete {
+  border-bottom: 2rpx solid rgba(1, 1, 1, 0.05);
+}
+.comment-item .right-wrap .content .content-text {
+  margin-top: 20rpx;
+}
+.comment-item .right-wrap .content .images-wrap {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.comment-item .right-wrap .content .images-wrap .image {
+  width: 30%;
+  height: 184rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.comment-item .right-wrap .content .images-wrap .image:nth-child(3n) {
+  margin-right: 0;
+}

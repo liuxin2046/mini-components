@@ -1,0 +1,4 @@
+<!--pages/card/card.wxml-->
+<view class="container">
+  <card info="{{info}}" refund="{{true}}" bind:handleRefund="handleRefund"></card>
+</view>

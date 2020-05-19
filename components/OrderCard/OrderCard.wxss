@@ -1,0 +1,56 @@
+.header {
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.header .order-no {
+  color: rgba(1, 1, 1, 0.6);
+}
+.header .status {
+  font-size: 30rpx;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom .options {
+  display: flex;
+}
+.bottom .options .order-btn:last-child {
+  margin-left: 30rpx;
+}
+.bottom .options .order-btn {
+  width: 172rpx;
+  padding: 14rpx 0;
+  border: 2rpx solid #010101;
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.bottom .options .order-btn.black {
+  color: #fff;
+  background-color: #010101;
+}
+.bottom .options button {
+  background: #fff;
+  border: 2rpx solid #010101;
+  width: 172rpx;
+  padding: 14rpx 0;
+  border-radius: 0;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: 400;
+  margin-left: 30rpx;
+}
+.bottom .options button::after {
+  border: none;
+}
+.bottom .options button.black {
+  color: #fff;
+  background-color: #010101;
+}

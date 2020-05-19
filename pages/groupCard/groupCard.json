@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "group-card": "/components/GroupCard/GroupCard"
+  }
+}

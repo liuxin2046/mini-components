@@ -1,0 +1,4 @@
+<!--pages/uploader/uploader.wxml-->
+<view class="container">
+  <uploader bind:handleImage="handleImage" info="{{info}}"></uploader>
+</view>

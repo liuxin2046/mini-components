@@ -1,0 +1,46 @@
+// out: Card.wxss
+.card {
+  font-size: 28rpx;
+  color: rgba(1, 1, 1, 1);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40rpx;
+  .cover {
+    width: 160rpx;
+    height: 160rpx;
+  }
+  .desc {
+    flex-grow: 1;
+    // padding-left: 30rpx;
+    padding: 8rpx 0 8rpx 30rpx;
+    .name {
+      max-width: 400rpx;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 32rpx;
+      margin-bottom: 30rpx;
+    }
+    .attributes, .num {
+      color:rgba(1,1,1,0.6);
+    }
+    .price {
+
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 8rpx;
+    .apply-btn {
+      font-size: 24rpx;
+      background:rgba(1,1,1,0.1);
+      padding: 8rpx 10rpx;
+    }
+    .apply-status {
+      background:#fff;
+      color: rgba(242,84,72,1);
+    }
+  }
+}

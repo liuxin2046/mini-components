@@ -1,0 +1,70 @@
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1rpx solid rgba(1, 1, 1, 0.1);
+  z-index: 999;
+}
+.bottom.iphone-x {
+  padding-bottom: 58rpx;
+}
+.bottom .left {
+  display: flex;
+  padding-left: 50rpx;
+}
+.bottom .left button {
+  background: transparent;
+  padding: 10rpx 15rpx;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #303030;
+}
+.bottom .left button::after {
+  border: none;
+}
+.bottom .left .img-option {
+  width: 48rpx;
+  height: 48rpx;
+}
+.bottom .left .logistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx 15rpx;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #303030;
+}
+.bottom .options {
+  display: flex;
+}
+.bottom .options .white-style {
+  width: 256rpx;
+  display: flex;
+  justify-content: center;
+  padding: 25rpx 0;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #010101;
+  border: 2rpx solid #010101;
+}
+.bottom .options .black-style {
+  width: 256rpx;
+  display: flex;
+  justify-content: center;
+  padding: 25rpx 0;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #fff;
+  background-color: #010101;
+  border: 2rpx solid #010101;
+}

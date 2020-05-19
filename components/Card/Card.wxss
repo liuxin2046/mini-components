@@ -1,0 +1,42 @@
+.card {
+  font-size: 28rpx;
+  color: #010101;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40rpx;
+}
+.card .cover {
+  width: 160rpx;
+  height: 160rpx;
+}
+.card .desc {
+  flex-grow: 1;
+  padding: 8rpx 0 8rpx 30rpx;
+}
+.card .desc .name {
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+.card .desc .attributes,
+.card .desc .num {
+  color: rgba(1, 1, 1, 0.6);
+}
+.card .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 8rpx;
+}
+.card .right .apply-btn {
+  font-size: 24rpx;
+  background: rgba(1, 1, 1, 0.1);
+  padding: 8rpx 10rpx;
+}
+.card .right .apply-status {
+  background: #fff;
+  color: #f25448;
+}

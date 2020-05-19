@@ -1,0 +1,106 @@
+<!--components/ActivityCard/ActivityCard.wxml-->
+<view class="activity-card {{sales ? 'gap' : ''}}">
+  <view class="header" wx:if="{{sales}}">
+    <view class="label">参团</view>
+    <view class="desc">
+      已拼<text class="number"> {{sales}} </text>件
+    </view>
+    <view wx:if="{{pending && pending.length > 2}}" class="more" catchtap="expend">
+      <text>查看更多</text>
+      <image class="arrow}}" src="/res/images/control_more_down.png"/>
+    </view>
+  </view>
+  <block>
+    <view class="card" wx:for="{{slicePending}}" wx:key="{{item.id}}">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view class="content">
+        <view>
+          {{item.nickname}}
+        </view>
+        <view class="activity-desc">
+          <view>
+            还差<text class="number">{{item.missingAmount}}人</text>成团
+          </view>
+          <view class="time">距结束 <view class="count-down"><van-count-down customStyle="color:rgba(1,1,1,0.6);font-size: 24rpx;" time="{{ item.duration }}" format="HH:mm:ss"/></view></view>
+        </view>
+      </view>
+      <view class="join" data-item="{{item}}" catchtap="showDialog">
+        立即参团
+      </view>
+    </view>
+  </block>
+  <van-overlay show="{{ showJoinGroup }}" z-index="999">
+    <view class="wrapper" wx:if="activityInfo">
+      <view class="content">
+        <view class="title">
+          <view>
+            参与 {{activityInfo.nickname}} 的团
+          </view>
+          <view class="count-down">
+            还差<text class="number">{{activityInfo.missingAmount}}</text>人，<van-count-down customStyle="color:rgba(1,1,1,1);font-size: 30rpx;" time="{{ activityInfo.duration }}" format="HH:mm:ss"/>后结束
+          </view>
+        </view>
+        <view class="member-list">
+          <view class="member">
+            <image class="sponsor" src="../../res/images/img_captain.png" alt=""/>
+            <image class="avatar" src="{{activityInfo.avatar}}" mode="aspectFill" />
+            <view>{{activityInfo.nickname}}</view>
+          </view>
+          <view class="member" wx:for="{{activityInfo.pendingMember}}" wx:key="{{item.id}}">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+            <view>{{item.nickname}}</view>
+          </view>
+          <view class="member" wx:for="{{activityInfo.pendingMember}}" wx:key="{{item.id}}">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+            <view>{{item.nickname}}</view>
+          </view>
+          <view class="member" wx:for="{{activityInfo.pendingMember}}" wx:key="{{item.id}}">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+            <view>{{item.nickname}}</view>
+          </view>
+          <view class="invite">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+            <view>待邀请</view>
+          </view>
+        </view>
+        <view class="join-btn" data-partSN="{{activityInfo.partSN}}" catchtap="joinActivity">
+          立即参加
+        </view>
+      </view>
+      <view class="close">
+        <image bindtap="onClickHide" class="close-icon" src="../../res/images/ic_close.png" />
+      </view>
+    </view>
+  </van-overlay>
+  <van-overlay show="{{ showGroupMember }}" z-index="999">
+    <view class="group-wrapper" wx:if="activityInfo">
+      <view class="content">
+        <view class="title">
+          等待成团
+        </view>
+        <view class="group-list">
+          <view class="group-card" wx:for="{{pending}}" wx:key="{{item.id}}">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+            <view class="card-content">
+              <view>
+                {{item.nickname}}
+              </view>
+              <view class="activity-desc">
+                <view>
+                  还差<text class="number">{{item.missingAmount}}人</text>成团
+                </view>
+                <view class="time">距结束 <view class="count-down"><van-count-down customStyle="color:rgba(1,1,1,0.6);font-size: 24rpx;" time="{{ item.duration }}" format="HH:mm:ss"/></view></view>
+              </view>
+            </view>
+            <view class="join" data-item="{{item}}" catchtap="showDialog">
+              立即参团
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="close">
+        <image bindtap="onClickHide" class="close-icon" src="../../res/images/ic_close.png" />
+      </view>
+    </view>
+  </van-overlay>
+</view>
